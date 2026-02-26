@@ -1,0 +1,103 @@
+npm create vite@latest sistema-academico
+cd sistema-academico
+npm install
+
+npm install react-router-dom react-toastify axios
+npm install -D tailwindcss@3.4.4 postcss autoprefixer
+npx tailwindcss init -p
+
+
+condiguracion para tailwind 
+export default {
+  darkMode: 'class',
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+
+
+Dependencias
+Tailwind CSS IntelliSense
+
+
+Src
+  pages
+  components
+    Navbar.jsx
+    Sidebar.jsx
+  routes
+  context
+  services
+app.jsx
+main.jsx
+
+
+
+# 🔹 `w-5/6`
+
+
+* `w-1/2` → 50%
+* `w-4/5` → 80%
+* `w-full` → 100%
+
+---
+
+# 🔹 4️⃣ `max-w-2xl`
+
+
+
+* `max-w-md` → pequeño
+* `max-w-lg` → mediano
+* `max-w-xl` → grande
+* `max-w-2xl` → más grande
+* `max-w-3xl` → aún más grande
+
+
+# `shadow-xl`
+
+
+* `shadow-sm`
+* `shadow`
+* `shadow-md`
+* `shadow-lg`
+* `shadow-xl`
+* `shadow-2xl`
+
+
+#  `rounded-xl`
+
+
+* `rounded` → poco redondeado
+* `rounded-lg`
+* `rounded-xl`
+* `rounded-2xl`
+* `rounded-full`
+
+
+| ----------- | -------------------- |
+| `text-xs`   | Muy pequeño          |
+| `text-sm`   | Pequeño              |
+| `text-base` | Normal (por defecto) |
+| `text-lg`   | Grande               |
+| `text-xl`   | Más grande           |
+| `text-2xl`  | Título               |
+| `text-3xl`  | Más grande           |
+| `text-4xl`  | Muy grande           |
+
+
+@fontsource/inter
+
+
+iconos
+https://v3.react-md.dev/packages/material-icons/demos
+
+
+npm run build
+
+
