@@ -14,12 +14,14 @@ const VehiculoCreate = () => {
             setLoading(true);
 
             const res = await fetchData("/vehiculos/crear", formData, "POST");
-            if (res?.error) return toast.error(res.error);
 
-            // Mostrar toast de éxito
+            if (res?.error) {
+                toast.error(res.error);
+                return;
+            }
+
             toast.success(res?.message || "Vehículo creado correctamente");
 
-            // Redirigir después de 1.5 segundos
             setTimeout(() => {
                 navigate("/vehiculos/listar");
             }, 1500);
@@ -34,7 +36,16 @@ const VehiculoCreate = () => {
     return (
         <div className="p-6 max-w-4xl mx-auto">
             <VehiculoForm
-                initialData={{}}
+                initialData={{
+                    marca: "",
+                    modelo: "",
+                    anio_fabricacion: "",
+                    placa: "",
+                    color: "",
+                    tipo_vehiculo: "",
+                    kilometraje: "",
+                    descripcion: ""
+                }}
                 onSubmit={handleCreate}
                 loading={loading}
                 isEdit={false}
